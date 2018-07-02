@@ -15,8 +15,6 @@ Dispersal <- 0.75     # Dispersal rate, m  (manuscript used these levels: 0.25, 
 Disp <- (Dispersal/(1-Spec))*1
 
 
-
-
 # Reporters for null counter-factual (sr = species richness; ev = species evenness; beta = community dissimilarity; a = local diversity (alpha), g = regional diversity (gamma))
 null.sr.a <- matrix(NA,ncol=(ts.length/rep.freq),nrow=iterations)
 null.sr.g <- matrix(NA,ncol=(ts.length/rep.freq),nrow=iterations)
@@ -137,6 +135,7 @@ x <- 1
   
 ################################################################################
 # Algorithm for the coalescence process to set up the simulation
+# See: Rosindell, J., et al. (2008) Ecological Informatics, 3, 259-271.  
 ################################################################################
 
 # Start the loop and continue until the number of species in the simulation matches the observed species richness
